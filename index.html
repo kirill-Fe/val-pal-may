@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>разработано florik project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+/*florik project*/
+        body {
+            font-family: 'Georgia', serif;
+            color: white;
+            overflow-x: hidden;
+            line-height: 1.6;
+            height: 100vh;
+        }
+/*florik project*/
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+/*florik project*/
+        .background-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+/*florik project*/
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+/*florik project*/
+        .main-text {
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+/*florik project*/
+        .nazvanie {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            letter-spacing: 1px;
+        }
+/*florik project*/
+        .soobschenie {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.8;
+        }
+/*florik project*/
+        .podpis {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            font-style: italic;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+            color: #ffccdd;
+        }
+/*florik project*/
+        @media (max-width: 768px) {
+            .nazvanie {
+                font-size: 2.5rem;
+            }
+            /*florik project*/
+            .soobschenie {
+                font-size: 1.3rem;
+            }
+            /*florik project*/
+            .podpis {
+                font-size: 1.5rem;
+            }
+        }
+/*florik project*/
+        @media (max-width: 480px) {
+            .nazvanie {
+                font-size: 2rem;
+            }
+            /*florik project*/
+            .soobschenie {
+                font-size: 1.1rem;
+            }
+            /*florik project*/
+            .content {
+                padding: 15px;
+            }
+        }
+/*florik project*/
+        @keyframes poyavlenie {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+/*florik project*/
+        .main-text > * {
+            animation: poyavlenie 1.2s ease-out forwards;
+            opacity: 0;
+        }
+/*florik project*/
+        .nazvanie {
+            animation-delay: 0.3s;
+        }
+/*florik project*/
+        .soobschenie:nth-of-type(1) {
+            animation-delay: 1.3s;
+        }
+/*florik project*/
+        .soobschenie:nth-of-type(2) {
+            animation-delay: 1.8s;
+        }
+/*florik project*/
+        .podpis {
+            animation-delay: 2.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <img src="./image.png" alt="Фоновая фотография" class="background-photo">
+    </div>
+<!--/*florik project*/-->
+    <div class="content">
+        <div class="main-text">
+            <h1 class="nazvanie">С Днем Святого Валентина, Зая!</h1>
+<!--/*florik project*/-->
+            <p class="soobschenie">В этот особенный день я хочу сказать как я рад что я с тобой встречаюсь, потому что ты моя самая первая и настоящая любовь, и я благодарен судьбе за нашу встречу.</p>
+            <!--/*florik project*/-->
+            <p class="soobschenie">Ты самая любимимая девушка в моей жизни, и с тобой даже самые обычные дни становятся не скучными ты даришь мне счястье и настроение появляется когда есть о чем поговорить, спасибо, что ты есть, моя дорогая Зая.</p>
+            <!--/*florik project*/-->
+            <p class="podpis">люблю тебя! твой котенок ❤️</p>
+        </div>
+    </div>
+</body>
+</html>
